@@ -96,7 +96,7 @@ class FlexDemo extends StatelessWidget {
                 ),
                 flex: 2,
               ),
-              Spacer(
+              const Spacer(
                 flex: 1,
               ),
               Expanded(
