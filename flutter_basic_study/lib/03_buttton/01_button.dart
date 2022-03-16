@@ -14,6 +14,13 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: ButtonDemo(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+        backgroundColor: Colors.red,
+        elevation: 0,
+      ),
     );
   }
 }
@@ -95,6 +102,83 @@ class ButtonDemo extends StatelessWidget {
               overlayColor: MaterialStateProperty.all(Colors.purple),
             ),
           ),
+          OutlinedButtonTheme(
+            data: OutlinedButtonThemeData(
+                style: ButtonStyle(
+              overlayColor: MaterialStateProperty.all(Colors.lightGreenAccent),
+            )),
+            child: OutlinedButton(
+                onPressed: () {
+                  print('点击 Outlined Button');
+                },
+                onLongPress: () {
+                  print('长按 Outlined Button');
+                },
+                child: const Text('轮廓 Button'),
+                style: ButtonStyle(
+                  overlayColor: MaterialStateProperty.all(Colors.redAccent),
+                )),
+          ),
+          IconButton(
+            onPressed: () {
+              print('Icon Button Pressed!');
+            },
+            //splashColor与highlightColor冲突 只能使用其中的一个
+            splashColor: Colors.lightBlue,
+            //highlightColor: Colors.red,
+            tooltip: "怎么了",
+            color: Colors.red,
+            icon: Icon(Icons.abc),
+          ),
+          TextButton.icon(
+            onPressed: () {
+              print('Text Button Pressed!');
+            },
+            icon: Icon(Icons.add),
+            label: Text('文本按钮'),
+          ),
+          ElevatedButton.icon(
+            onPressed: () {
+              print('Elevated Button Pressed!');
+            },
+            icon: Icon(Icons.add),
+            label: Text('Elevated 按钮'),
+          ),
+          OutlinedButton.icon(
+            onPressed: () {
+              print('Outlined Button Pressed!');
+            },
+            icon: Icon(Icons.add),
+            label: Text('Outlined 按钮'),
+          ),
+          Container(
+            color: Colors.pink[100],
+            width: double.infinity,
+            child: ButtonBar(
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('按钮1'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('按钮2'),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text('按钮3'),
+                ),
+              ],
+            ),
+          ),
+          BackButton(
+            color: Colors.red,
+            onPressed: () {},
+          ),
+          CloseButton(
+            color: Colors.yellow,
+            onPressed: () {},
+          )
         ],
       ),
     );
