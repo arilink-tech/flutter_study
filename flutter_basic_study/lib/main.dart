@@ -21,7 +21,14 @@ import 'package:flutter/material.dart';
 // import '08_state/02_data_table.dart';
 // import '08_state/03_InheritedWidget.dart';
 // import '08_state/04_life_circle.dart';
-import '08_state/05_provider.dart';
+// import '08_state/05_provider.dart';
+// import '09_navgation/01_anonymous.dart';
+// import '09_navgation/02_namedroute.dart';
+// import '09_navgation/03_onGenerateRoute.dart';
+// import '09_navgation/04_arguments.dart';
+// import '09_navgation/05_drawer.dart';
+// import '09_navgation/06_bootomNavigationBar.dart';
+import '09_navgation/07_tab.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -35,6 +42,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Flutter Demo",
       home: Home(),
+      //命名路由
+      // routes: {
+      //   'home': ((context) => Home()),
+      //   'product': ((context) => Product()),
+      //   'productDetail': ((context) => ProductDetail()),
+      // },
+      // initialRoute: 'home',
+      // onUnknownRoute: (RouteSettings setting) =>
+      //     MaterialPageRoute(builder: (context) => UnKnowPage()),
+      //动态路由
+      // onGenerateRoute: (RouteSettings setting) {
+      //   print(setting.name);
+      //   if (setting.name == '/')
+      //     return MaterialPageRoute(builder: (context) => Home());
+      //   if (setting.name == '/product')
+      //     return MaterialPageRoute(builder: (context) => Product());
+      //   //匹配 /product/:id
+      //   var uri = Uri.parse(setting.name!);
+      //   print(uri.pathSegments);
+      //   if (uri.pathSegments.length == 2 &&
+      //       uri.pathSegments.first == 'product') {
+      //     var id = uri.pathSegments[1];
+      //     return MaterialPageRoute(builder: (context) => ProductDetail(id: id));
+      //   }
+      //   return MaterialPageRoute(builder: (context) => UnKnowPage());
+      // },
       theme: ThemeData(fontFamily: 'Roboto'),
       debugShowCheckedModeBanner: false,
     );
