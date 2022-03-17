@@ -15,7 +15,8 @@ import 'package:flutter/material.dart';
 // import '05_list/04_gridView.dart';
 // import '06_others/01_cupertino.dart';
 // import '07_third_party/01_dio.dart';
-import '07_third_party/02_flutter_swiper.dart';
+// import '07_third_party/02_flutter_swiper.dart';
+import '07_third_party/03_shared_preferences.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -34,3 +35,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+

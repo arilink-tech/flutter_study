@@ -53,7 +53,6 @@ class FlutterSwiperDemo extends StatelessWidget {
             autoplay: true,
           ),
         ),
-        Spacer(10),
         Container(
           height: 400,
           child: Swiper(
@@ -84,7 +83,6 @@ class FlutterSwiperDemo extends StatelessWidget {
             autoplay: true,
           ),
         ),
-        Spacer(10),
         Container(
           height: 400,
           child: Swiper(
