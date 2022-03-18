@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
       label: '我的',
     )
   ];
-  final Widget? pages = [
+  final Widget pages = [
     Center(
       child: Text(
         'Home',
