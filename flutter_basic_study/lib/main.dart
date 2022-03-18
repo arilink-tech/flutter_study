@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 //import '01_basic/01_hello.dart';
 //import '01_basic/02_text.dart';
 // import '02_layout/01_container.dart';
@@ -35,7 +36,10 @@ import 'package:flutter/material.dart';
 // import '10_form/04_textField.dart';
 // import '10_form/05_calendar.dart';
 // import '10_form/06_form.dart';
-import '10_form/07_form.dart';
+// import '10_form/07_form.dart';
+// import '11_others/01_animation.dart';
+// import '11_others/02_staggerAnimation.dart';
+import '11_others/03_heroAnimation.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -77,6 +81,21 @@ class MyApp extends StatelessWidget {
       // },
       theme: ThemeData(fontFamily: 'Roboto'),
       debugShowCheckedModeBanner: false,
+      //添加本地代理
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'),
+        const Locale('zh', 'CN'),
+      ],
+      localeResolutionCallback: (locale, supportedLocales) {
+        print('deviceLocale: $locale');
+        print('languageCode: ${locale!.languageCode}');
+        print('countryCode: ${locale.countryCode}');
+      },
     );
   }
 }
